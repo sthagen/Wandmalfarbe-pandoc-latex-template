@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file. On the [releases page](https://github.com/Wandmalfarbe/pandoc-latex-template/releases/) you can see all released versions of the Eisvogel template and download the [latest version](https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest).
 
+## [3.5.1] - 2026-07-04
+
+- fix: any custom `mainfont` (XeLaTeX or LuaLaTeX) gets incorrectly
+  overridden by *Source Sans* (#459, dm5n)
+
 ## [3.5.0] - 2026-06-28
 
 - fix: change `SEDOPTION` in `release.sh` to index (#409, #457, SandyJackson)
@@ -254,6 +259,7 @@ the [documentation on docker hub](https://hub.docker.com/r/pandoc/extra).
 
 - First release of the template as a ZIP file with the examples.
 
+[3.5.1]: https://github.com/Wandmalfarbe/pandoc-latex-template/compare/v3.5.0...v3.5.1
 [3.5.0]: https://github.com/Wandmalfarbe/pandoc-latex-template/compare/v3.4.0...v3.5.0
 [3.4.0]: https://github.com/Wandmalfarbe/pandoc-latex-template/compare/v3.3.0...v3.4.0
 [3.3.0]: https://github.com/Wandmalfarbe/pandoc-latex-template/compare/v3.2.1...v3.3.0
