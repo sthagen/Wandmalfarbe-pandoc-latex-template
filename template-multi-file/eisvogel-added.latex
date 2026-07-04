@@ -45,19 +45,23 @@ $endif$
 \renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
 \item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
 
-$if(fontfamily)$
-$else$
 %
 % Source Sans as the default font family
 % Source Code Pro for monospace text
 %
-% 'default' option sets the default
-% font family to Source Sans, not \sfdefault.
-%
-%
-\usepackage[default]{sourcesans}
-\usepackage{sourcecodepro}
-$endif$
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  $if(fontfamily)$
+  $else$
+  \usepackage[default]{sourcesans}
+  \usepackage{sourcecodepro}
+  $endif$
+\else % if not pdftex (e.g. lualatex)
+  $if(mainfont)$
+  $else$
+  \usepackage[default]{sourcesans}
+  \usepackage{sourcecodepro}
+  $endif$
+\fi
 
 %
 % heading color
